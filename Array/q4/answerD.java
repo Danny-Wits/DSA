@@ -25,15 +25,16 @@ public class answerD {
         int p = 1;
         for (int j = 0; j < prod.length; j++) {
           count++;
-          if (array[i] == 0) {
+          if (i == j) {
+            continue;
+          }
+          else if (array[j] == 0) {
+            System.out.println("runs");
             Arrays.fill(prod, 0);
             System.out.println("Product = " + Arrays.toString(prod));
             return;
           }
-          if (i == j) {
-            continue;
-          }
-          p *= array[i];
+          p *= array[j];
         }
         prod[i] = p;
       } else {
