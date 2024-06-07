@@ -11,9 +11,9 @@ class test {
         var U = new answerU();
         var O = new opt();
         int[] test1 = {10, 3, 5, 6, 2};
-        int[] test2 = { 7, 6, 4, 3, 1 ,0};
-        int[] test3 = { 2, 4, 1, 4, 2, 1};
-        int[] test4 = { 3, 3, 5, 0, 0, 3,4,3,3,1,5,1,1,3,1,1,2,3,4,3,2,1,1,1,12,3,12,3,3,2,3,2,0,0,0,0,0,0,0,0,1,1,1,1,1,1 };
+        int[] test2 = { 0, 6, 4, 3, 1 ,0};
+        int[] test3 = { 3, 5, 1, 1, 3,4,3,3,1,5,1,1,3,1,1,2,3,4,3,2,1,1,12,3,12,3,3,2,3,2,1,1,1,1,1,1,0};
+        int[] test4 = { 0,0, 3, 5, 0, 1, 3,4,3,3,1,5,1,1,3,1,1,2,3,4,3,2,1,1,1,12,3,12,3,3,2,3,2,0,0,0,0,0,0,0,0,1,1,1,1,1,1 };
 
         System.out.println("Danishwer");
         D.test(test1);
@@ -35,14 +35,14 @@ class test {
         U.test(test4);
         System.out.printf(" | Size : %d  |     iterations : %d\n",test4.length, U.count);
 
-        // System.out.println("OPT");
-        // System.out.print(((O.test(test1) == 5) ? "PASS" : "FAIL"));
-        // System.out.printf(" | iterations : %d\n", O.count);
-        // System.out.print(((O.test(test2) == 0) ? "PASS" : "FAIL"));
-        // System.out.printf(" | iterations : %d\n", O.count);
-        // System.out.print((O.test(test3) ==6)? "PASS" : "FAIL");
-        // System.out.printf(" | iterations : %d\n", O.count);
-        // System.out.print((O.test(test4)==3) ? "PASS" : "FAIL");
-        // System.out.printf(" | iterations : %d\n", O.count);
+        System.out.println("OPT");
+        O.test(test1);
+        System.out.printf(" | Size : %d  |    iterations : %d\n",test1.length, O.count);
+        O.test(test2);
+        System.out.printf(" | Size : %d  |   iterations : %d\n", test2.length,O.count);
+        O.test(test3);
+        System.out.printf(" | Size : %d  |   iterations : %d\n", test3.length,O.count);
+        O.test(test4);
+        System.out.printf(" | Size : %d  |     iterations : %d\n",test4.length, O.count);
     }
 }

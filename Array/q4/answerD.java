@@ -12,24 +12,47 @@ public class answerD {
   }
 
   void test(int[] array) {
-    count =0;
+    count = 0;
+
+    if (array.length == 1) {
+      System.out.println("[]");
+      return;
+    }
     int product = product(array);
-    int []prod= new int[array.length];
-    
+    int[] prod = new int[array.length];
     for (int i = 0; i < prod.length; i++) {
-      count++;
-      if(array[i]==0){
-        
+      if (array[i] == 0) {
+        int p = 1;
+        for (int j = 0; j < prod.length; j++) {
+          count++;
+          if (array[i] == 0) {
+            Arrays.fill(prod, 0);
+            System.out.println("Product = " + Arrays.toString(prod));
+            return;
+          }
+          if (i == j) {
+            continue;
+          }
+          p *= array[i];
+        }
+        prod[i] = p;
+      } else {
+        count++;
+        prod[i] = product / array[i];
       }
-      prod[i]=product/array[i];  
+
     }
     System.out.println("Product = " + Arrays.toString(prod));
   }
-  int product(int [] array){
-    int p=1;
+
+  int product(int[] array) {
+    int p = 1;
     for (int i : array) {
       count++;
-      p*=i;
+      if (i == 0) {
+        return 0;
+      }
+      p *= i;
     }
     return p;
   }
