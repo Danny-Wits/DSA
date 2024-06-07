@@ -1,6 +1,8 @@
 package Array.q4;
 // Given an array of n elements that contains elements from 0 to n-1,
 
+import java.util.Arrays;
+
 //  with any of these numbers appearing any number of times. Find these repeating numbers in O(n) 
 //  and use only constant memory space.
 
@@ -12,7 +14,8 @@ class test {
         var O = new opt();
         int[] test1 = {10, 3, 5, 6, 2};
         int[] test2 = {-1,1,0,-3,3};
-        int[] test3 = { 3, 5, 1, 1, 3,4,3,3,1,5,1,1,3,1,1,2,3,4,3,2,1,1,12,3,12,3,3,2,3,2,1,1,1,1,1,1,0};
+        int[] test3 = new int[20];
+        Arrays.fill(test3,2);
         int[] test4 = { 0,0, 3, 5, 0, 1, 3,4,3,3,1,5,1,1,3,1,1,2,3,4,3,2,1,1,1,12,3,12,3,3,2,3,2,0,0,0,0,0,0,0,0,1,1,1,1,1,1 };
 
         System.out.println("Danishwer");

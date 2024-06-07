@@ -13,7 +13,7 @@ public class answerU {
             for (int i = j + 1; i < ar.length; i++) {
                 count++;
                 if (ar[j] == ar[i]) {
-                    System.out.println(ar[j] + ",");
+                    System.out.print(ar[j] + ",");
 
                 }
 

@@ -29,7 +29,6 @@ public class answerD {
             continue;
           }
           else if (array[j] == 0) {
-            System.out.println("runs");
             Arrays.fill(prod, 0);
             System.out.println("Product = " + Arrays.toString(prod));
             return;

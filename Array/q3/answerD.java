@@ -12,7 +12,7 @@ public class answerD {
         count = 0;
     }
     void test(int[] array){
-    count=0;
+    count=array.length;
     Arrays.sort(array);
     int value=array[0];
     boolean printed=false;
