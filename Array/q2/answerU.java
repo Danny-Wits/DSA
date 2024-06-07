@@ -13,9 +13,6 @@ public class answerU {
     int max(int[] arr) {
         for (int j = 0; j < arr.length; j++) {
             for (int i = j + 1; i < arr.length; i++) {
-// if () {
-    
-// }
 
 
             }
