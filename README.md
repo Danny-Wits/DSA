@@ -1,1 +1,1 @@
-Popular DSA questions and atempts at solving them.
+Popular DSA questions and attempts at solving them.
