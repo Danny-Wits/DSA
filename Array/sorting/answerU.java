@@ -40,7 +40,7 @@ public class answerU {
 
     // Partition is done recursively on each side of the pivot after the pivot is
     // placed in its correct position and this finally sorts the array.
-    public static int[] qsort(int[] clone) {
-
+    public static int[] msort(int[] clone) {
+        return null;
     }
 }

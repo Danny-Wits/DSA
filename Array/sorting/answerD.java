@@ -1,5 +1,7 @@
 package Array.sorting;
 
+import java.util.Arrays;
+
 public class answerD {
     // In Bubble Sort algorithm,
 
@@ -39,11 +41,49 @@ public class answerD {
 
     // Partition is done recursively on each side of the pivot after the pivot is
     // placed in its correct position and this finally sorts the array.
-    public static int[] qsort(int[] clone) {
-       
+    public static void msort(int[] array) {
+        int length = array.length;
+        if(length<=1)return;
+        int middle=length/2;
+        int [] leftArray=new int[middle];
+        int [] rightArray=new int[length-middle];
+       for (int i = 0; i < leftArray.length; i++) {
+        leftArray[i]=array[i];
+       }
+       for (int i = 0; i <rightArray.length; i++) {
+        rightArray[i]=array[i+middle];
+       }
+       msort(leftArray); 
+       msort(rightArray);
+       merge(leftArray,rightArray,array);
     }
+    
+    public static void merge(int [] leftArray,int[] rightArray , int[] array){
+        int leftLength=leftArray.length;
+        int rightLength=rightArray.length;
+        int i=0,j=0,k=0;
 
-
-
+        while (j<leftLength&&k<rightLength) {
+              if (leftArray[j]<rightArray[k]) {
+                 array[i]=leftArray[j];
+                    i++;
+                    j++;
+              }else{
+                array[i]=rightArray[k];
+                i++;
+                k++;
+              }
+        }
+        while (k<rightLength) {
+            array[i]=rightArray[k];
+                i++;
+                k++;
+        }
+        while (j<leftLength) {
+            array[i]=leftArray[j];
+            i++;
+            j++;
+        }
+    }
 
 }
