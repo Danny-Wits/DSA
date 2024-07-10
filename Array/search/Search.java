@@ -1,5 +1,4 @@
 package Array.search;
-
 import Array.sorting.*;
 public class Search {
 

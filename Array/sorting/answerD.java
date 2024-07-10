@@ -1,6 +1,9 @@
 package Array.sorting;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class answerD {
     // In Bubble Sort algorithm,
@@ -41,6 +44,41 @@ public class answerD {
 
     // Partition is done recursively on each side of the pivot after the pivot is
     // placed in its correct position and this finally sorts the array.
+
+    public static void qsort(int [] array){
+        List<Integer>arr=new ArrayList<>();
+        for (int i:array) {
+            arr.add(i);
+        }
+        List<Integer>sorted=qsortHelper(arr);
+        for (int i = 0; i < array.length; i++) {
+            array[i]= sorted.get(i);
+        }
+       // System.out.println(Arrays.toString(array));
+    }
+
+    public static List<Integer> qsortHelper(List<Integer> array) {
+
+        int pivot = array.size() - 1;
+        if (pivot <= 0)return array;
+        List<Integer> before = new ArrayList<>();
+        List<Integer> after = new ArrayList<>();
+        for (int i = 0; i < array.size()-1; i++) {
+            if (array.get(i) >= array.get(pivot)) {
+                after.add(array.get(i));
+            } else {
+                before.add(array.get(i));
+            }
+        }
+        before = qsortHelper(before);
+        after = qsortHelper(after);
+        before.add(array.get(pivot));
+        before.addAll(after);
+
+        return before;
+
+    }
+
     public static void msort(int[] array) {
         int length = array.length;
         if(length<=1)return;
